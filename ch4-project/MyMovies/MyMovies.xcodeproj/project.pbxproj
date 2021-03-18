@@ -7,25 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		833E2D9826037BF20013CFCA /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E2D9726037BF20013CFCA /* AddEditViewController.swift */; };
+		833E2D9C260394760013CFCA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E2D9B260394760013CFCA /* SettingsViewController.swift */; };
+		83790A3A260316FD00B75AE6 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83790A39260316FD00B75AE6 /* UIViewController+CoreData.swift */; };
 		838FBA6F26012C0500759783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838FBA6E26012C0500759783 /* AppDelegate.swift */; };
 		838FBA7126012C0500759783 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838FBA7026012C0500759783 /* SceneDelegate.swift */; };
 		838FBA7326012C0500759783 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838FBA7226012C0500759783 /* ViewController.swift */; };
-		838FBA7626012C0500759783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838FBA7426012C0500759783 /* Main.storyboard */; };
 		838FBA7926012C0500759783 /* MyMovies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 838FBA7726012C0500759783 /* MyMovies.xcdatamodeld */; };
 		838FBA7B26012C1100759783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838FBA7A26012C1100759783 /* Assets.xcassets */; };
 		838FBA7E26012C1200759783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838FBA7C26012C1200759783 /* LaunchScreen.storyboard */; };
+		83A1232F2602623300AD23A2 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A1232E2602623300AD23A2 /* movies.json */; };
+		83A123352602718E00AD23A2 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A123342602718D00AD23A2 /* MoviesTableViewController.swift */; };
+		83A123382602794200AD23A2 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A123372602794200AD23A2 /* MovieTableViewCell.swift */; };
+		83EB03252602AB3A000B0377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EB03232602AB3A000B0377 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		833E2D9726037BF20013CFCA /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
+		833E2D9B260394760013CFCA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		83790A39260316FD00B75AE6 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 		838FBA6B26012C0500759783 /* MyMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838FBA6E26012C0500759783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		838FBA7026012C0500759783 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		838FBA7226012C0500759783 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		838FBA7526012C0500759783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		838FBA7826012C0500759783 /* MyMovies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyMovies.xcdatamodel; sourceTree = "<group>"; };
 		838FBA7A26012C1100759783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		838FBA7D26012C1200759783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		838FBA7F26012C1200759783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83A1232E2602623300AD23A2 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
+		83A123342602718D00AD23A2 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
+		83A123372602794200AD23A2 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		83EB03242602AB3A000B0377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +70,20 @@
 		838FBA6D26012C0500759783 /* MyMovies */ = {
 			isa = PBXGroup;
 			children = (
+				833E2D9726037BF20013CFCA /* AddEditViewController.swift */,
 				838FBA6E26012C0500759783 /* AppDelegate.swift */,
-				838FBA7026012C0500759783 /* SceneDelegate.swift */,
-				838FBA7226012C0500759783 /* ViewController.swift */,
-				838FBA7426012C0500759783 /* Main.storyboard */,
 				838FBA7A26012C1100759783 /* Assets.xcassets */,
-				838FBA7C26012C1200759783 /* LaunchScreen.storyboard */,
 				838FBA7F26012C1200759783 /* Info.plist */,
+				838FBA7C26012C1200759783 /* LaunchScreen.storyboard */,
+				83EB03232602AB3A000B0377 /* Main.storyboard */,
+				83A1232E2602623300AD23A2 /* movies.json */,
+				83A123342602718D00AD23A2 /* MoviesTableViewController.swift */,
+				83A123372602794200AD23A2 /* MovieTableViewCell.swift */,
 				838FBA7726012C0500759783 /* MyMovies.xcdatamodeld */,
+				838FBA7026012C0500759783 /* SceneDelegate.swift */,
+				833E2D9B260394760013CFCA /* SettingsViewController.swift */,
+				83790A39260316FD00B75AE6 /* UIViewController+CoreData.swift */,
+				838FBA7226012C0500759783 /* ViewController.swift */,
 			);
 			path = MyMovies;
 			sourceTree = "<group>";
@@ -129,7 +147,8 @@
 			files = (
 				838FBA7E26012C1200759783 /* LaunchScreen.storyboard in Resources */,
 				838FBA7B26012C1100759783 /* Assets.xcassets in Resources */,
-				838FBA7626012C0500759783 /* Main.storyboard in Resources */,
+				83A1232F2602623300AD23A2 /* movies.json in Resources */,
+				83EB03252602AB3A000B0377 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,30 +159,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A123352602718E00AD23A2 /* MoviesTableViewController.swift in Sources */,
 				838FBA7326012C0500759783 /* ViewController.swift in Sources */,
+				83A123382602794200AD23A2 /* MovieTableViewCell.swift in Sources */,
 				838FBA6F26012C0500759783 /* AppDelegate.swift in Sources */,
+				833E2D9826037BF20013CFCA /* AddEditViewController.swift in Sources */,
+				83790A3A260316FD00B75AE6 /* UIViewController+CoreData.swift in Sources */,
 				838FBA7926012C0500759783 /* MyMovies.xcdatamodeld in Sources */,
 				838FBA7126012C0500759783 /* SceneDelegate.swift in Sources */,
+				833E2D9C260394760013CFCA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		838FBA7426012C0500759783 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				838FBA7526012C0500759783 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		838FBA7C26012C1200759783 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				838FBA7D26012C1200759783 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		83EB03232602AB3A000B0377 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83EB03242602AB3A000B0377 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
