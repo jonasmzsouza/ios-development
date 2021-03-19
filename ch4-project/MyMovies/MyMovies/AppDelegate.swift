@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,10 +15,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Defining the UNUserNotificationCenter delegate as this class itself.
+        // With that, this class will answer for the UNUserNotificationCenter.
+        UNUserNotificationCenter.current().delegate = self
+        
+        // Requesting that the current setting be provided, that is, what the user responded to when asking for permission.
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            
+            // If the authorization status is notDetermined, it means that the user has never been asked to accept
+            // (that is, it is the first time the app is opened). In that case, we will ask for permission.
+            if settings.authorizationStatus == .notDetermined {
+                
+                // First, an options file is created indicating what our notification will do.
+                // In our case, we will show the notification alert and play a sound.
+                let options: UNAuthorizationOptions = [.alert, .sound]
+                
+                // Requesting authorization through the requestAuthorization method.
+                UNUserNotificationCenter.current().requestAuthorization(options: options, completionHandler: { (success, error) in
+                    
+                    // The success property indicates whether the user has authorized it or not.
+                    if error == nil {
+                        print(success)
+                    } else {
+                        print(error!.localizedDescription)
+                    }
+                    
+                })
+            
+            // Always printing the message if the user has denied it.
+            } else if settings.authorizationStatus == .denied {
+                print("User denied notification")
+            }
+        }
         return true
     }
-    
     // MARK: UISceneSession Lifecycle
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -79,3 +111,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    // Method called when notification will appear with the app open
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound])
+    }
+    
+    // Method called when the notification will appear with the app closed or in the background
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        completionHandler()
+    }
+}

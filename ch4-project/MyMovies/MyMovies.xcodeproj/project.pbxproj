@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		833E2D9826037BF20013CFCA /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E2D9726037BF20013CFCA /* AddEditViewController.swift */; };
 		833E2D9C260394760013CFCA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E2D9B260394760013CFCA /* SettingsViewController.swift */; };
+		833E2D9F2603B36F0013CFCA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E2D9E2603B36F0013CFCA /* API.swift */; };
 		83790A3A260316FD00B75AE6 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83790A39260316FD00B75AE6 /* UIViewController+CoreData.swift */; };
 		838FBA6F26012C0500759783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838FBA6E26012C0500759783 /* AppDelegate.swift */; };
 		838FBA7126012C0500759783 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838FBA7026012C0500759783 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		833E2D9726037BF20013CFCA /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
 		833E2D9B260394760013CFCA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		833E2D9E2603B36F0013CFCA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		83790A39260316FD00B75AE6 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 		838FBA6B26012C0500759783 /* MyMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838FBA6E26012C0500759783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				838FBA7F26012C1200759783 /* Info.plist */,
 				838FBA7C26012C1200759783 /* LaunchScreen.storyboard */,
 				83EB03232602AB3A000B0377 /* Main.storyboard */,
+				833E2D9E2603B36F0013CFCA /* API.swift */,
 				83A1232E2602623300AD23A2 /* movies.json */,
 				83A123342602718D00AD23A2 /* MoviesTableViewController.swift */,
 				83A123372602794200AD23A2 /* MovieTableViewCell.swift */,
@@ -163,6 +166,7 @@
 				838FBA7326012C0500759783 /* ViewController.swift in Sources */,
 				83A123382602794200AD23A2 /* MovieTableViewCell.swift in Sources */,
 				838FBA6F26012C0500759783 /* AppDelegate.swift in Sources */,
+				833E2D9F2603B36F0013CFCA /* API.swift in Sources */,
 				833E2D9826037BF20013CFCA /* AddEditViewController.swift in Sources */,
 				83790A3A260316FD00B75AE6 /* UIViewController+CoreData.swift in Sources */,
 				838FBA7926012C0500759783 /* MyMovies.xcdatamodeld in Sources */,

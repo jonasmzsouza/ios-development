@@ -154,14 +154,26 @@
                                 <rect key="frame" x="180.66666666666666" y="186.66666666666666" width="53" height="53"/>
                                 <state key="normal" image="play"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf4-p0-ZVv">
+                                <rect key="frame" x="272" y="401" width="122" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Schedule reminder">
+                                    <color key="titleColor" red="0.99215686270000003" green="0.80000000000000004" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="scheduleNotification:" destination="Ji6-6Q-CjQ" eventType="touchUpInside" id="z7W-3Q-JTM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LC0-S8-bia"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sav-ft-4Je" firstAttribute="centerX" secondItem="2yb-Ob-CRv" secondAttribute="centerX" id="3Ii-Wr-177"/>
                             <constraint firstItem="sav-ft-4Je" firstAttribute="centerY" secondItem="2yb-Ob-CRv" secondAttribute="centerY" id="6My-uf-vEs"/>
+                            <constraint firstItem="LC0-S8-bia" firstAttribute="trailing" secondItem="cf4-p0-ZVv" secondAttribute="trailing" constant="20" id="EVg-sv-HVU"/>
                             <constraint firstItem="2yb-Ob-CRv" firstAttribute="leading" secondItem="0s1-Qy-JMZ" secondAttribute="leading" id="IX4-5X-n3O"/>
                             <constraint firstItem="vK1-iT-iZR" firstAttribute="top" secondItem="juc-Ar-kMX" secondAttribute="bottom" constant="5" id="IpH-qk-24R"/>
+                            <constraint firstItem="cf4-p0-ZVv" firstAttribute="top" secondItem="TXQ-E6-MG9" secondAttribute="bottom" id="MNC-Ou-gUO"/>
                             <constraint firstItem="jsx-pc-dh8" firstAttribute="bottom" secondItem="LC0-S8-bia" secondAttribute="bottom" id="TvQ-ux-7eC"/>
                             <constraint firstItem="juc-Ar-kMX" firstAttribute="leading" secondItem="LC0-S8-bia" secondAttribute="leading" constant="20" id="WIe-fF-nxn"/>
                             <constraint firstItem="jsx-pc-dh8" firstAttribute="leading" secondItem="LC0-S8-bia" secondAttribute="leading" id="Z1h-vA-Vds"/>
