@@ -7,6 +7,7 @@
 
 import UIKit
 import UserNotifications
+import AVKit
 
 class ViewController: UIViewController {
     
@@ -20,6 +21,10 @@ class ViewController: UIViewController {
     
     // Variable that will receive the movie trailer
     var trailer: String = ""
+    
+    // Creating AVPlayer and AVPlayerViewController objects
+    var moviePlayer: AVPlayer?
+    var moviePlayerController: AVPlayerViewController?
     
     @IBOutlet weak var ivMovie: UIImageView!
     @IBOutlet weak var lbTitle: UILabel!
@@ -53,7 +58,6 @@ class ViewController: UIViewController {
         
         // Retrieving data from datePicker to pass on to TextField
         alert.textFields?.first?.text = dateFormatter.string(from: datePicker.date)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,11 +87,26 @@ class ViewController: UIViewController {
             //Taking the trailer url and assigning it to the variable trailer, doing it in the main thread.
             DispatchQueue.main.async {
                 self.trailer = trailer.previewUrl
-                print("Trailer URL:", trailer.previewUrl)
+                //print("Trailer URL:", trailer.previewUrl)
+                self.prepareVideo()
             }
         }
     }
     
+    func prepareVideo() {
+        // Creating the URL with the movie trailer address
+        guard let url = URL(string: trailer) else {return}
+        
+        // Instantiating moviePlayer and moviePlayerController
+        moviePlayer = AVPlayer(url: url)
+        moviePlayerController = AVPlayerViewController()
+        
+        // Defining that the moviePlayer will be the video player of the controller
+        moviePlayerController?.player = moviePlayer
+        
+        // Defining that the video playback controls will be shown
+        moviePlayerController?.showsPlaybackControls = true
+    }
     
     @IBAction func scheduleNotification(_ sender: UIButton) {
         
@@ -116,6 +135,14 @@ class ViewController: UIViewController {
         
         // Showing the alert to the user
         present(alert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func play(_ sender: UIButton) {
+        guard let moviePlayerController = moviePlayerController else {return}
+        present(moviePlayerController, animated: true) {
+            self.moviePlayer?.play()
+        }
     }
     
     // Schedule a notification
